@@ -1,3 +1,3 @@
-<footer class="blanco">
+<footer class="blanco abajo">
         <p>Bibliografía.</p>
     </footer>

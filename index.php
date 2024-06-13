@@ -1,9 +1,9 @@
 <?php
 include 'header.php';
 ?>
-    <main class="flex">
+    <main class="flex ">
         <section class="actividades blanco">
-            <h2>Actividades</h2>
+            <h2 class="centrar">Actividades</h2>
             <ul>
                 <li>Preguntas</li>
                 <li>Juegos</li>
@@ -22,8 +22,9 @@ include 'header.php';
             <h2>Datos interesantes. Correcciones.</h2>
         </aside>
     </main>
-
 </body>
+<div class="marb10em blanco"></div>
+
 <?php
 include 'footer.php';
 ?>

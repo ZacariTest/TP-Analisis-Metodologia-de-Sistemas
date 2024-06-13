@@ -12,16 +12,16 @@ session_start();
 <body class="flex margin0">
 <header class="blanco flex flexwrap">
     <div class="logo">
-    <img src="img/logo.png" alt="Logo de la Empresa" width="75" height="50">
-
+    <a href="index.php"><img src="img/logo.png" alt="Logo de la Empresa" width="75" height="50"></a>
     </div>
     <nav>
-        <ul class="flex margin0">
-            <li><a class="blanco deconone pad0"href="#">Ranking</a></li>
-            <li><a class="blanco deconone pad0"href="#">Tienda</a></li>
-            <li><a class="blanco deconone pad0"href="#">Sobre nosotros</a></li>
-            <li><a class="blanco deconone pad0"href="#">Ayuda</a></li>
-        </ul>
+    <ul class="flex margin0">
+        <li><a class="blanco deconone pad0" href="index.php">Inicio</a></li>
+        <li><a class="blanco deconone pad0" href="ranking.php">Ranking</a></li>
+        <li><a class="blanco deconone pad0" href="tienda.php">Tienda</a></li>
+        <li><a class="blanco deconone pad0" href="sobre_nosotros.php">Sobre nosotros</a></li>
+        <li><a class="blanco deconone pad0" href="ayuda.php">Ayuda</a></li>
+    </ul>
         </nav>
     <div class="login flex flexwrap">
         <?php if (isset($_SESSION['username'])): ?>
@@ -29,8 +29,9 @@ session_start();
         <?php else: ?>        <?php endif; ?>
             </div>
     <div class =" margin0 blanco">
-               <a class="blanco deconone pad0" href="#">Registrarse</a>
-               <a class="blanco deconone pad0"href="#">Iniciar Sesión</a>
+               <a class="blanco deconone pad0" href="registro.php">Registrarse</a>
+               <a class="blanco deconone pad0"href="login.php">Iniciar Sesión</a>
 
         </div>
+        
 </header>
