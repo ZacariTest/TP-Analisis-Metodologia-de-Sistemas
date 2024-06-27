@@ -1,20 +1,18 @@
-<?php
-include_once('header.php');
-?>
+<?php require('layout/header.php') ?>
 <main>
-    <div class="contenido centrar">
+    <div class="contenido centrar letraLogReg">
         <h2 class="textologin">Registro de usuario</h2>
 
         <form method="get" action="proceso_registro.php">
-            <div>
-                <label for="usuario"><i class="fa-solid fa-user"></i> Nombre:</label>
-                <input class="marl2em formainput" placeholder="Usuario" type="text" id="usuario" name="usuario">
+            <div class="formadivLogReg">
+                <label class="lblUserReg" for="usuario"><i class="fa-solid fa-user"></i> Nombre:</label>
+                <input class="formainput" placeholder="Usuario" type="text" id="usuario" name="usuario">
             </div>
-            <div>
+            <div class="formadivLogReg">
                 <label for="pass"><i class="fa-solid fa-key"></i> Contraseña:</label>
-                <input class="mart2em formainput" placeholder="Contraseña" type="password" id="pass" name="pass">
+                <input class="formainput" placeholder="Contraseña" type="password" id="pass" name="pass">
             </div>
-            <div class="nacionalidad-section">
+            <div class="nacionalidad-section formadivLogReg">
                 <label for="nacionalidad"><i class="fa-solid fa-flag"></i> Nacionalidad:</label>
                 <select class="formainput " id="nacionalidad" name="nacionalidad">
                     <option value="1">Argentina</option>
@@ -23,11 +21,10 @@ include_once('header.php');
                 </select>
             </div>
             <div>
-                <button type="submit" class="mart2em btn btn-primary"><i class="fa-regular fa-registered"></i> Registrarse</button>
+                <button type="submit" class="btn btn-primary butLogReg"><i class="fa-solid fa-user-pen"></i> Registrarse</button>
             </div>
         </form>
     </div>
 </main>
-<?php
-include_once('footer.php');
-?>
+<?php require('layout/footer.php') ?>
+<?php require('layout/js.php') ?>

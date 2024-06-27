@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
         $conexion = mysqli_connect('localhost', 'root', '', 'ingles', '3306');
 
         if ($conexion) {
-            $consulta = "SELECT * FROM usuarios WHERE nombreUsuario = '$usuario'";
+            $consulta = "SELECT * FROM usuario WHERE nombreUsuario = '$usuario'";
             $resultado = mysqli_query($conexion, $consulta);
 
             if ($resultado && mysqli_num_rows($resultado) > 0) {
@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
                 if ($contraseña === $fila['pass']) { 
                     $_SESSION['nombre_usuario'] = $usuario;
                     $_SESSION['nivel_usuario'] = $fila['nivel'];
+                    $_SESSION['id_usuario'] = $fila['idUsuario'];
+
                     header("Location: index.php");
                     exit();
                 } else {
