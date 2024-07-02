@@ -167,15 +167,8 @@ footer {
     font-family: "Montserrat", sans-serif;
     font-size: medium;
 }
-.margint10{
-margin-top: 10em;
-}
-.footer {
-    margin-top: 20px; /* Ajusta el valor según sea necesario */
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
+
+
 
 /* @media (max-width: 768px) {
     nav ul {
@@ -308,9 +301,6 @@ margin-bottom: 1em;
 .lblUserReg{
 margin-right: 1.8em;
 }
-.card {
-    width: 100%;
-}
 
 .margTit{
     margin-top: 1em !important;
@@ -327,7 +317,7 @@ left: 35%;
 .tildeRegistro{
     font-size: 25em;
       position: absolute;
-      top: 32%;
+      top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: green;
@@ -381,8 +371,14 @@ font-size: large;
     font-size: medium;
 }
 
+a, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+  }
 
 
+.center {
+    text-align: center;
+}
 
 
 

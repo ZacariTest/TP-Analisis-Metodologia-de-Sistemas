@@ -5,7 +5,7 @@ $mensaje = "";
 if (isset($_POST['submit'])) {
     if (isset($_POST['usuario']) && isset($_POST['contraseña'])) {
         $usuario = $_POST['usuario'];
-        $contraseña = $_POST['contraseña'];
+        $contraseña = ($_POST['contraseña']);
         $conexion = mysqli_connect('localhost', 'root', '', 'ingles', '3306');
 
         if ($conexion) {
@@ -14,7 +14,9 @@ if (isset($_POST['submit'])) {
 
             if ($resultado && mysqli_num_rows($resultado) > 0) {
                 $fila = mysqli_fetch_assoc($resultado);
-                if ($contraseña === $fila['pass']) { 
+                $contraseña_hash= $fila['pass'];
+
+                if (password_verify($contraseña, $contraseña_hash)) {
                     $_SESSION['nombre_usuario'] = $usuario;
                     $_SESSION['nivel_usuario'] = $fila['nivel'];
                     $_SESSION['id_usuario'] = $fila['idUsuario'];
@@ -22,10 +24,14 @@ if (isset($_POST['submit'])) {
                     header("Location: index.php");
                     exit();
                 } else {
-                    $mensaje = "Credenciales incorrectas. Inténtalo de nuevo.";
+                    $mensaje = "
+                    $contraseña
+                    hola
+                    $contraseña_hash
+                    Credenciales incorrectas. Inténtalo de nuevo.";
                 }
             } else {
-                $mensaje = "Credenciales incorrectas. Inténtalo de nuevo.";
+                $mensaje = "Usuario no encontrado.";
             }
 
             mysqli_close($conexion);

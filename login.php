@@ -23,7 +23,7 @@
             <button type="submit" class="btn btn-primary butLogReg" name="submit"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</button>
             </div>
             
-            <a href="#" class="olvide">Olvidé mi contraseña</a>
+            <a href="olvide_contraseña.php" class="olvide">Olvidé mi contraseña</a>
         </form>
     </div>
 </main>

@@ -195,7 +195,7 @@
             echo "</div>"; 
         }
         ?>
-        </div> <!-- Close row -->
+        </div> 
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Enviar</button>
         </div>

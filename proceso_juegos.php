@@ -7,7 +7,7 @@ $id_usuario = $_SESSION['id_usuario'];
 
 $cant_correcta = 0;
 $calificacion_final = 0;
-$numeros_utilizados = $_SESSION['numero1_utilizado'];
+$numeros_utilizados = $_SESSION['numeros_utilizados'];
 
 for ($i = 1; $i <= 5; $i++) {
     $respuesta_usuario = $_POST['respuesta' . $i];

@@ -1,18 +1,3 @@
- <?php
-// $conexion = mysqli_connect('localhost', 'root', '', 'ingles', '3306');
-//session_start();
-//$loggeado = isset($_SESSION['nombre_usuario']);
-//$id_usuario = $_SESSION['id_usuario'];
-//$sql = "SELECT SUM(experiencia) AS suma_experiencia FROM resultados WHERE idUsuario = '$id_usuario'";
-//$resultado = $conexion->query($sql);
-//if ($resultado->num_rows > 0) {
-//    $row = $resultado->fetch_assoc();
-//    $suma_experiencia = $row['suma_experiencia'];
-//    $nivel = floor(sqrt($suma_experiencia));
-//}else{
-//    $nivel = 1;
-//}
-?>
 
 <?php
 $conexion = mysqli_connect('localhost', 'root', '', 'ingles', '3306');
@@ -56,15 +41,15 @@ if (isset($_SESSION['id_usuario'])) {
         </nav>
         <div class="login flex flexwrap">
             <?php if (!$loggeado): ?>
-            <a href="registro.php">
-                    <p class="linea blanco derecho"><i class="fa-solid fa-user-pen"></i> Registrarse</p>
+            <a href="registro.php" class="linea blanco derecho">
+                    <p><i class="fa-solid fa-user-pen"></i> Registrarse</p>
                 </a>
-            <a href="login.php">
-                    <p class="blanco linea derechom marl2em"><i class="fa-solid fa-right-to-bracket"></i> Login</p>
+            <a href="login.php" class="blanco linea derechom marl2em">
+                    <p><i class="fa-solid fa-right-to-bracket"></i> Login</p>
                 </a>
             <?php else: ?>
             <p class="blanco linea derecho"><i class="fa-solid fa-gamepad"></i> Nivel: <?php echo $nivel; ?></p>
-            <p class="blanco linea derecho marl2em"><i class="fa-solid fa-user"></i> <?php echo $_SESSION['nombre_usuario']; ?></p>
+            <p class="marl2em"><a href="perfil.php" class="blanco linea derecho"><i class="fa-solid fa-user"></i> <?php echo $_SESSION['nombre_usuario']; ?></a></p>
             <p class="marl2em"><a href="logout.php " class="blanco linea derecho"><i class="fa-solid fa-right-to-bracket"></i> Logout</a></p>
 
             <?php endif ?>
